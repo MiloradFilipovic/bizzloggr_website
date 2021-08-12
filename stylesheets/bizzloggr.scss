@@ -1,0 +1,22 @@
+$very_dark_grey: #303030;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $very_dark_grey;
+}
+
+.content {
+    height: 90vh;
+    width: 90vh;
+    margin: 2% auto;
+
+    background-image: url(../images/temp_banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
