@@ -82,6 +82,7 @@ section h2 {
 }
 .intro .intro_image {
   width: 62%;
+  height: 36vw;
   position: absolute;
   right: -23%;
   bottom: 0;
@@ -91,7 +92,7 @@ section h2 {
   width: 50%;
 }
 .intro h1 {
-  margin-top: 14%;
+  margin-top: 33vh;
   margin-bottom: 0.3em;
   font-size: 3em;
   text-transform: uppercase;
