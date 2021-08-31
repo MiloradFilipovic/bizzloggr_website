@@ -1,4 +1,5 @@
-$very_dark_grey: #303030;
+@import 'vars';
+@import 'mixins';
 
 * {
     padding: 0;
@@ -7,15 +8,105 @@ $very_dark_grey: #303030;
 }
 
 body {
-    background-color: $very_dark_grey;
+    font-family: $main_font;
+    color: $secondary_text;
 }
 
-.content {
-    height: 90vh;
-    margin: 2% auto;
 
-    background-image: url(../images/temp_banner.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+header {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color: $primary;
+    color: #fff;
+    padding: 1em 10em;
+    @include clearfix;
+
+    &.shadow {
+        -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+           -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+                box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    }
+
+    .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+        a { 
+            color: $yellow; 
+            text-decoration: none;
+        }
+    }
+
+    nav {
+        float: right;
+        ul {
+            li {
+                display: inline-block;
+                margin-left: 1em;
+                a {
+                    text-transform: uppercase;
+                    color: #fff;
+                    text-decoration: none;
+                    line-height: 2em;
+
+                    &:hover { color: $yellow; }
+                }
+            }
+        }
+    }
+}
+
+section {
+    padding: 5em 10em;
+    text-align: center;
+
+    h2 {
+        text-transform: uppercase;
+    }
+}
+
+.intro {
+    padding: 0 0 0 10em;
+    height: 90vh;
+    background-color: $primary_dark;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    color: #fff;
+
+    .intro_image {
+        width: 62%;
+        position: absolute;
+        right: -23%;
+        bottom: 0;
+    }
+
+    h1, p {
+        font-weight: normal;
+        width: 50%;
+    }
+
+    h1 {
+        margin-top: 14%;
+        margin-bottom: 0.3em;
+        font-size: 3em;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $yellow;
+    }
+
+    .google_play_badge {
+        display: inline-block;
+        margin-top: 1em;
+        width: 12%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+#about {
+    background-color: $grey_light;
 }
