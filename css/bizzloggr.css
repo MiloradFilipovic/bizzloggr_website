@@ -81,15 +81,15 @@ section h2 {
   color: #fff;
 }
 .intro .intro_image {
-  width: 62%;
-  height: 36vw;
   position: absolute;
-  right: -23%;
+  height: 80%;
+  width: 122vh;
+  right: -41vh;
   bottom: 0;
 }
 .intro h1, .intro p {
   font-weight: normal;
-  width: 50%;
+  width: 40%;
 }
 .intro h1 {
   margin-top: 33vh;
