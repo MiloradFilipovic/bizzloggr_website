@@ -75,6 +75,7 @@ header {
         display: none;
         cursor: pointer;
         font-size: 1.5em;
+        line-height: 2em;
         user-select: none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-tap-highlight-color: transparent;
@@ -152,7 +153,9 @@ section {
     align-items: center;
 
     .about {
-        flex-grow: 2;
+        width: 60%;
+        border-right: 1px solid #ccc;
+        padding-right: 3em;
         ul {
             li {
                 margin: 1em 0;
@@ -161,10 +164,12 @@ section {
     }
 
     .screenshot {
-        flex-grow: 1;
+        width: 40%;
+        text-align: right;
+
         img {
-            height: 90%;
-            max-width: 21em;
+            width: 70%;
+            max-width: 30em;;
         }
     }
 }
@@ -259,7 +264,7 @@ section {
 
     section {
         text-align: center;
-        padding: 5em 1em;
+        padding: 5em;
     }
 
     header {
@@ -285,10 +290,20 @@ section {
     #about {
         flex-direction: column;
         .about {
+            padding: 0;
+            margin-bottom: 2em;
+            border-right: none;
+            width: 100%;
             ul {
                 list-style: none;
             }
-            margin-bottom: 3em;
+        }
+
+        .screenshot {
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            padding-top: 2em;
         }
     }
 }
