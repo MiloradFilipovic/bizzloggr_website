@@ -18,7 +18,7 @@ header {
     width: 100%;
     background-color: $primary;
     color: #fff;
-    padding: 1em 10em;
+    padding: 0.5em 10em;
     @include clearfix;
 
     &.shadow {
@@ -35,6 +35,18 @@ header {
         a {
             color: $yellow;
             text-decoration: none;
+            float: left;
+
+            img {
+                height: 2em;
+                float: left;
+            }
+            span {
+                display: table-cell;
+                vertical-align: middle;
+                height: 2em;
+                padding-left: .2em;
+            }
         }
     }
 
@@ -49,7 +61,7 @@ header {
                     text-transform: uppercase;
                     color: #fff;
                     text-decoration: none;
-                    line-height: 2em;
+                    line-height: 3em;
 
                     &:hover {
                         color: $yellow;
@@ -66,9 +78,7 @@ header {
         user-select: none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         -webkit-tap-highlight-color: transparent;
-        &::after {
-            content: "☰";
-        }
+        &::after { content: "☰"; }
     }
 
     .menu_checkbox {
@@ -77,8 +87,7 @@ header {
 }
 
 section {
-    padding: 5em 10em;
-    text-align: center;
+    padding: 10em 20em;
 
     h2 {
         text-transform: uppercase;
@@ -103,7 +112,7 @@ section {
         position: absolute;
         height: 80%;
         width: 122vh;
-        right: -41vh;
+        right: -40vh;
         bottom: 0;
     }
 
@@ -139,40 +148,54 @@ section {
 
 #about {
     background-color: $grey_light;
+    display: flex;
+    align-items: center;
+
+    .about {
+        flex-grow: 2;
+        ul {
+            li {
+                margin: 1em 0;
+            }
+        }
+    }
+
+    .screenshot {
+        flex-grow: 1;
+        img {
+            height: 90%;
+            max-width: 21em;
+        }
+    }
 }
 
+@include xlarge {
+    #about {
+        padding: 10em 15em;
+    }
+}
+
+// Large tablet version
 @include large {
     section {
-        padding: 2em 5em;
+        padding: 5em 10em;
     }
 
     header {
-        padding: 1em 5em;
+        padding: .5em 5em;
     }
 
     .intro {
         padding: 0 0 0 5em;
         .intro_image {
-            right: -37vw;
+            right: -50vh;
         }
     }
 }
 
-@include narrow {
-    .intro {
-        h1 {
-            margin-top: 25vh;
-        }
-        .intro_image {
-            right: -10vw;
-        }
-    }
-}
-
+// Tablet version
 @include medium {
     header {
-        // .logo { display: none; }
-
         .menu_button {
             display: block;
             float: right;
@@ -182,13 +205,11 @@ section {
             &:checked {
                 & ~ nav {
                     transition: height 0.2s, opacity 0.3s linear;
-                    height: 10em;
+                    height: 15em;
                     opacity: 1;
                     margin-top: 1em;
                 }
-                & + .menu_button:after {
-                    content: "✕";
-                }
+                & + .menu_button:after { content: "✕"; }
             }
         }
 
@@ -226,12 +247,19 @@ section {
             width: 40%;
         }
     }
+
 }
 
+// Phone version
 @include small {
     section,
     header {
         padding: 1em;
+    }
+
+    section {
+        text-align: center;
+        padding: 5em 1em;
     }
 
     header {
@@ -243,8 +271,21 @@ section {
     }
 
     .intro {
+        padding: 1em;
+        height: auto;
+
+        h1 {
+            margin-top: 10vh;
+        }
         .google_play_badge {
             width: 60%;
+        }
+    }
+
+    #about {
+        flex-direction: column;
+        .about {
+            margin-bottom: 3em;
         }
     }
 }

@@ -17,8 +17,14 @@
     }
 }
 
+@mixin xlarge {
+    @media screen and (min-width:2000px) {
+        @content;
+    }
+}
+
 @mixin large {
-    @media screen and (max-width:1500px) and (min-height:800px) {
+    @media screen and (max-width:1500px), (min-height:1000px) {
         @content;
     }
 }
@@ -37,7 +43,7 @@
 }
 
 @mixin narrow {
-    @media screen and (max-height: 800px) {
+    @media screen and (min-height: 1200px) {
         @content;
     }
 }
