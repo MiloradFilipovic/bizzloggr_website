@@ -112,7 +112,7 @@ section {
     background-color: $grey_light;
 }
 
-@media screen and (max-width:1200px) and (min-height:800px) {
+@media screen and (max-width:1500px) and (min-height:800px) {
     section {
         padding: 2em 5em;
     }
@@ -139,7 +139,7 @@ section {
     }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1300px) {
     header {
         text-align: center;
         .logo { display: none; }
