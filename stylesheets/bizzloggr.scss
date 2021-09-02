@@ -203,3 +203,17 @@ section {
         }
     }
 }
+
+@include small {
+    section, header {
+        padding: 1em;
+    }
+
+    header {
+        nav {
+            ul {
+                text-align: left;
+            }
+        }
+    }
+}
