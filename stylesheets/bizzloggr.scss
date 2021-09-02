@@ -285,6 +285,9 @@ section {
     #about {
         flex-direction: column;
         .about {
+            ul {
+                list-style: none;
+            }
             margin-bottom: 3em;
         }
     }
