@@ -8,6 +8,10 @@ $grey_light: #f1f2f7;
 $yellow: #ffce76;
 $red: #FF5722;
 $green: #8BC34A;
+// Lite colors:
+$lite_primary: #2196F3;
+$lite_primary_dark: #1976D2;
+$lite_primary_light: #BBDEFB;
 
 $logo_font: 'Fjalla One', sans-serif;
 $main_font: 'Roboto', sans-serif;
@@ -15,3 +19,8 @@ $main_font: 'Roboto', sans-serif;
 $intro_padding_horizontal_large: 10em;
 $section_padding_horizontal_large: 20em;
 $section_padding_vertical_large: 10em;
+
+$elevation_2dp: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
+$elevation_3dp: 0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.12), 0 1px 8px 0 rgba(0,0,0,0.20);
+$elevation_4dp: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+$elevation_6dp: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);

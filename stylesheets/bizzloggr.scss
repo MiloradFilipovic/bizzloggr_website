@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
 
 header {
     position: fixed;
+    top: 0;
     z-index: 999;
     width: 100%;
     background-color: $primary;
@@ -183,15 +185,24 @@ section {
 }
 
 #about {
-    background-color: $grey_light;
-
-    li { margin: 1em 0; }
+    ul {
+        list-style: none;
+        li { 
+            margin: 1em 0;
+            line-height: 1.7em;
+            &::before {
+                content: "▶";
+                margin-right: .5em;
+                color: $primary;
+            }   
+        }
+    }
 
     .screenshot {
         text-align: right;
         img {
             width: 70%;
-            max-width: 30em;;
+            max-width: 30em;
         }
     }
 }
@@ -199,6 +210,123 @@ section {
 
 #pricing {
     text-align: center;
+    background-color: $grey_light;
+
+    .section_content {
+        align-items: flex-start;
+    }
+
+    .pricing_table {
+        margin: 0 auto;
+        border-collapse: collapse;
+
+
+        thead {
+            tr {
+                th {
+                    color: #fff;
+                    border-radius: 10px;
+                    padding: .5em 3em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: $elevation_4dp;
+                    img { width: 4em; }
+                    span {
+                        margin-left: .5em;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                border-bottom: 1px solid #ccc;
+                &.first {
+                    td { 
+                        border-radius: 10px 10px 0 0; 
+                    }
+                 }
+                &.no_border { 
+                    border-bottom: none; 
+                   td {  border-radius: 0 0 10px 10px; }
+                }
+                &.spacer {
+                    height: 1em;
+                    border: none;
+                }
+                td { 
+                    padding: 1em; 
+                    background-color: #fff;
+                    box-shadow: $elevation_2dp;
+                }
+                &:hover td {
+                    box-shadow: $elevation_3dp;
+                }
+            }
+        }
+        tfoot {
+            tr {
+                &.cost {
+                    td {
+                        font-size: 1.2em;
+                        border-radius: 10px 10px 0 0;
+                    }
+                }
+                &.play_store {
+                    td {
+                        border-radius: 0 0 10px 10px;
+                    }
+                }
+                td {
+                    padding: .5em;
+                    box-shadow: $elevation_4dp;
+                    img { width: 10em; }
+                }
+            }
+        }
+    }
+
+    .pricing_lite {
+        width: 50%;
+        .pricing_table {
+            thead {
+                th { background-color: $lite_primary; }
+            }
+            tfoot {
+                tr.cost {
+                    td { 
+                        color: $lite_primary_dark;
+                        background-color: $lite_primary_light; 
+                    }
+                }
+                td {
+                    background-color: $lite_primary;
+                }
+            }
+        }
+    }
+
+    .pricing_pro {
+        width: 50%;
+        .pricing_table {
+            thead {
+                th { background-color: $primary; }
+            }
+            tfoot {
+                tr.cost {
+                    td { 
+                        color: $primary_dark;
+                        background-color: $primary_light;
+                    }
+                }
+                td {
+                    background-color: $primary;
+                }
+            }
+        }
+
+    }
 }
 
 // -------------------------------------------------------------------------------------------- RESPONSIVE STYLES
@@ -261,6 +389,7 @@ section {
 // Phone version
 @include small {
     section {
+        padding: $section_padding_horizontal_large/10;;
         text-align: center;
 
         &.two_columns {
@@ -287,7 +416,18 @@ section {
 
 
     #about {
-        .about { ul { list-style: none; } }
+        .about { ul { text-align: left; } }
         .screenshot { text-align: center; }
+    }
+
+    #pricing {
+        .pricing_lite {
+            margin-bottom: 5em;
+        }
+
+        .section_content {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
