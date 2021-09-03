@@ -17,14 +17,8 @@
     }
 }
 
-@mixin xlarge {
-    @media screen and (min-width:2000px) {
-        @content;
-    }
-}
-
 @mixin large {
-    @media screen and (max-width:1500px), (min-height:1000px) {
+    @media screen and (max-width:1500px) {
         @content;
     }
 }
