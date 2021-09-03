@@ -220,7 +220,6 @@ section {
         margin: 0 auto;
         border-collapse: collapse;
 
-
         thead {
             tr {
                 th {
@@ -230,7 +229,6 @@ section {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    box-shadow: $elevation_4dp;
                     img { width: 4em; }
                     span {
                         margin-left: .5em;
@@ -252,11 +250,11 @@ section {
                    td {  border-radius: 0 0 10px 10px; }
                 }
                 &.spacer {
-                    height: 1em;
+                    height: .5em;
                     border: none;
                 }
                 td { 
-                    padding: 1em; 
+                    padding: .7em 1em; 
                     background-color: #fff;
                     box-shadow: $elevation_2dp;
                 }
@@ -280,7 +278,6 @@ section {
                 }
                 td {
                     padding: .5em;
-                    box-shadow: $elevation_4dp;
                     img { width: 10em; }
                 }
             }
@@ -414,6 +411,9 @@ section {
         nav { ul { text-align: left; } }
     }
 
+    .intro {
+        padding: $section_padding_horizontal_large/4 $section_padding_horizontal_large/10;
+    }
 
     #about {
         .about { ul { text-align: left; } }
@@ -422,8 +422,11 @@ section {
 
     #pricing {
         .pricing_lite {
+            width: 100%;
             margin-bottom: 5em;
         }
+
+        .pricing_pro { width: 100%; }
 
         .section_content {
             flex-direction: column;
