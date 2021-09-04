@@ -211,118 +211,219 @@ section {
 #pricing {
     text-align: center;
     background-color: $grey_light;
+    overflow-x: auto;
+    padding: $section_padding_vertical_large $section_padding_horizontal_large/2; //10em 20em
 
     .section_content {
         align-items: flex-start;
+    }
+
+    .price_tag {
+        display: flex;
+        padding: 2em 4em;
+        align-items: center;
+        justify-content: center;
+        box-shadow: $elevation_2dp;
+        position: relative;
+        top: 1em;
+        span {
+            font-size: 2.5em;
+            font-weight: normal;
+        }
     }
 
     .pricing_table {
         margin: 0 auto;
         border-collapse: collapse;
 
+        th, td { padding: 1em; }
+
         thead {
             tr {
-                th {
-                    color: #fff;
-                    border-radius: 10px;
-                    padding: .5em 3em;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    img { width: 4em; }
-                    span {
-                        margin-left: .5em;
-                        font-size: 1.5em;
+                color: #fff;
+                &.logo {
+                    th.logo {
+                        padding-bottom: 0;
+                        &.lite {
+                            div {
+                                background-color: $lite_primary_dark;
+                            }
+                        }
+                        &.pro {
+                            div {
+                                background-color: $primary_dark;
+                            }
+                        }
+                        div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding:  1em;
+                            border-radius: 5px 5px 0 0;
+                            min-width: 20em;
+                            img { width: 4em; }
+                            span {
+                                display: inline-block;
+                                margin-left: 0.5em;
+                                font-size: 1.5em;
+                            }
+                        }
+                    }
+                }
+                &.descr {
+                    th {
+                        padding: 0 1em;
+                        text-transform: uppercase;
+                        font-weight: normal;
+                        div {
+                            padding: .5em;
+                            box-shadow: $elevation_2dp;
+                        }
+                        &.lite {
+                            div {
+                                background-color: $lite_primary;
+                            }
+                        }
+                        &.pro {
+                            div {
+                                background-color: $primary;
+                            }
+                        }
+                    }
+                }
+                &.price {
+                    th {
+                        padding: 0 1em;
+                        div.price_wrapper {
+                            padding: 0 em 0;
+                            display: flex;
+                            justify-content: center;
+                        }
+                        &.lite {
+                            div.price_wrapper { background-color: $lite_primary_dark; }
+                            div.price_tag { background-color: $lite_primary; }
+                        }
+                        &.pro {
+                            div.price_wrapper { background-color: $primary_dark; }
+                            div.price_tag { background-color: $primary; }
+                        }
                     }
                 }
             }
         }
         tbody {
+            background-color: #fff;
             tr {
                 border-bottom: 1px solid #ccc;
-                &.first {
-                    td { 
-                        border-radius: 10px 10px 0 0; 
+                vertical-align: middle;
+                td.no, td.yes { 
+                    font-weight: bold;
+                    font-size: 1.5em;
+                }
+                td.no { color: $red; }
+                td.yes { color: $green; }
+                td.feature_column {
+                    .feature_title {
+                        font-weight: bold;
+                        margin-bottom: 10px;
                     }
-                 }
-                &.no_border { 
-                    border-bottom: none; 
-                   td {  border-radius: 0 0 10px 10px; }
+                    .feature_descr {
+                        font-style: italic;
+                    }
+                    text-align: right;
                 }
-                &.spacer {
-                    height: .5em;
-                    border: none;
-                }
-                td { 
-                    padding: .7em 1em; 
-                    background-color: #fff;
+                &.spacer {  height: .5em; }
+                &.no_border { border: none; }
+                &:hover {
                     box-shadow: $elevation_2dp;
-                }
-                &:hover td {
-                    box-shadow: $elevation_3dp;
                 }
             }
         }
         tfoot {
-            tr {
-                &.cost {
-                    td {
-                        font-size: 1.2em;
-                        border-radius: 10px 10px 0 0;
-                    }
-                }
-                &.play_store {
-                    td {
-                        border-radius: 0 0 10px 10px;
-                    }
-                }
+            td.blank { background-color: $grey_light; }
+            tr.play_store {
                 td {
-                    padding: .5em;
-                    img { width: 10em; }
+                    padding: 0 1em;
+                    div {
+                        padding: .5em;
+                        border-radius: 0 0 5px 5px;
+                    }
                 }
+                td.lite { 
+                    div { background-color: $lite_primary; }
+                }
+                td.pro { 
+                    div { background-color: $primary; }
+                }
+                img { width: 10em; }
             }
         }
     }
 
-    .pricing_lite {
-        width: 50%;
-        .pricing_table {
-            thead {
-                th { background-color: $lite_primary; }
+    .pricing_mobile {
+        display: none;
+        width: 100%;
+
+        .mobile_price {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 5px;
+            width: 90%;
+            max-width: 32em;
+            color: #fff;
+            margin: 0 auto;
+            box-shadow: $elevation_2dp;
+
+            .logo {
+                padding: 1em;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img { width: 5em; };
+                span {
+                    font-size: 1.5em;
+                    font-weight: bold;
+                    margin-top: .5em;
+                }
             }
-            tfoot {
-                tr.cost {
-                    td { 
-                        color: $lite_primary_dark;
-                        background-color: $lite_primary_light; 
-                    }
-                }
-                td {
-                    background-color: $lite_primary;
-                }
+
+            &.lite {
+                background-color: $lite_primary_dark;
+                margin-bottom: 2em;
+            }
+            &.pro {
+                background-color: $primary_dark;
             }
         }
-    }
-
-    .pricing_pro {
-        width: 50%;
-        .pricing_table {
-            thead {
-                th { background-color: $primary; }
+        .mobile_descr {
+            width: 100%;
+            padding: .5em;
+            
+            p {
+                text-transform: uppercase;
+                text-align: center;
+                line-height: 1.5em;
             }
-            tfoot {
-                tr.cost {
-                    td { 
-                        color: $primary_dark;
-                        background-color: $primary_light;
-                    }
-                }
-                td {
-                    background-color: $primary;
-                }
+            &.lite { background-color: $lite_primary; }
+            &.pro { background-color: $primary; }
+        }
+        .price_wrapper {
+            padding: 2em 1em;
+            .price_tag { 
+                position: initial; 
+                &.lite { background-color: $lite_primary; }
+                &.pro { background-color: $primary; }
             }
         }
-
+        .mobile_price_footer {
+            padding: 1em;
+            border-radius: 0 0 5px 5px;
+            img { width: 80%; }
+            &.lite { background-color: $lite_primary; }
+            &.pro { background-color: $primary; }
+        }
     }
 }
 
@@ -381,6 +482,38 @@ section {
         }
     }
 
+    #pricing {
+        padding: 5em 2em;
+        .pricing_table {
+            width: 100%;
+            thead {
+                tr.logo th.logo {
+                    div {
+                        flex-direction: column;
+                        min-width: auto;
+                        span {
+                            margin-top: .5em;
+                            margin-left: 0;
+                        }
+                    }
+                }
+                tr.price th {
+                    div.price_wrapper {
+                        .price_tag {
+                            padding: 2em;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr td.feature_column {
+                    .feature_title { margin-bottom: 0; }
+                    .feature_descr { display: none; }
+                }
+            }
+        }
+    }
+
 }
 
 // Phone version
@@ -421,16 +554,11 @@ section {
     }
 
     #pricing {
-        .pricing_lite {
-            width: 100%;
-            margin-bottom: 5em;
-        }
-
-        .pricing_pro { width: 100%; }
-
         .section_content {
             flex-direction: column;
             align-items: center;
+            .pricing_table { display: none; }
+            .pricing_mobile { display: block; }
         }
     }
 }
