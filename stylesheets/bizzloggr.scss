@@ -191,10 +191,9 @@ section {
             margin: 1em 0;
             line-height: 1.7em;
             &::before {
-                content: "▶";
+                content: "➤";
                 margin-right: .5em;
                 color: $primary;
-                font-family: monospace;
             }   
         }
     }
@@ -230,6 +229,12 @@ section {
         span {
             font-size: 2.5em;
             font-weight: normal;
+
+            // &.superscript {
+            //     font-size: 1em;
+            //     line-height: 2.5em;
+            //     vertical-align: super;
+            // }
         }
     }
 
