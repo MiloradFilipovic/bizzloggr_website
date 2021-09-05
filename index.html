@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizzLoggr</title>
+    <title>BizzLoggr app | Home</title>
     <link rel="stylesheet" href="css/bizzloggr.css">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -229,7 +229,7 @@
     <section id="contact">
         <div class="section_content">
             <div class="contact-form">
-                <form name="contact" method="POST" data-netlify="true">
+                <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
                     <div class="form-row">
                         <input type="text" name="first_name" placeholder="First name" required>
                         <input type="text" name="last_name" placeholder="Last name" required>
@@ -245,6 +245,7 @@
                         <textarea name="message" cols="30" rows="10" placeholder="Your message..." required></textarea>
                     </div>
                     <div class="form-row submit">
+                        <div class="recaptcha" data-netlify-recaptcha="true"></div>
                         <input type="submit" value="Send">
                     </div>
                 </form>

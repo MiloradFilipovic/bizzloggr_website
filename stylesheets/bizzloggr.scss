@@ -482,7 +482,12 @@ section {
                 }
                 
                 &.submit {
-                    justify-content: right;
+                    align-content: center;
+                    .recaptcha {
+                        width: 70%;
+                        padding: 10px;
+                        color: #fff;
+                    }
                     input[type=submit] {
                         border: none;
                         padding: .5em 4em;
