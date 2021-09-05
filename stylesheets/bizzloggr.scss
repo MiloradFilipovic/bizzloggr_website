@@ -55,6 +55,7 @@ header {
 
     nav {
         float: right;
+        overflow: hidden;
         ul {
             li {
                 display: inline-block;
@@ -220,21 +221,31 @@ section {
 
     .price_tag {
         display: flex;
-        padding: 2em 4em;
+        padding: 2.25em 4em;
         align-items: center;
         justify-content: center;
-        box-shadow: $elevation_2dp;
+        box-shadow: $elevation_4dp;
         position: relative;
         top: 1em;
         span {
-            font-size: 2.5em;
+            font-size: 3em;
             font-weight: normal;
+        }
 
-            // &.superscript {
-            //     font-size: 1em;
-            //     line-height: 2.5em;
-            //     vertical-align: super;
-            // }
+        &.pro {
+            align-items: flex-start;
+            padding: 1.25em 4em;
+            span {
+                &.amount {
+                    font-size: 4.5em;
+                }
+                &.superscript {
+                    font-size: 1.5em;
+                    padding-top: .6em;
+                    
+                    &.currency { margin-right: -0.2em;}
+                }
+            }
         }
     }
 
@@ -243,6 +254,7 @@ section {
         border-collapse: collapse;
 
         th, td { padding: 1em; }
+        .blank { visibility: hidden; }
 
         thead {
             tr {
@@ -319,6 +331,7 @@ section {
         }
         tbody {
             background-color: #fff;
+            box-shadow: $elevation_2dp;
             tr {
                 border-bottom: 1px solid #ccc;
                 vertical-align: middle;
@@ -331,7 +344,7 @@ section {
                 td.feature_column {
                     .feature_title {
                         font-weight: bold;
-                        margin-bottom: 10px;
+                        margin-bottom: 5px;
                     }
                     .feature_descr {
                         font-style: italic;
@@ -340,9 +353,6 @@ section {
                 }
                 &.spacer {  height: .5em; }
                 &.no_border { border: none; }
-                &:hover {
-                    box-shadow: $elevation_2dp;
-                }
             }
         }
         tfoot {
@@ -506,7 +516,10 @@ section {
                 tr.price th {
                     div.price_wrapper {
                         .price_tag {
-                            padding: 2em;
+                            &.lite {
+                                padding: 2em;
+                            }
+                            padding: 1em 2em;
                         }
                     }
                 }
