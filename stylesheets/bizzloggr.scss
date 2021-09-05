@@ -445,12 +445,18 @@ section {
 
 #contact {
     .contact-form, .contact-info { width: 50%; }
+    background-color: $primary_dark;
+    color: #fff;
+
+    li:before {
+        color: $grey_light;
+    }
 
     .contact-form {
         padding: 1em;
-        background-color: $primary;
         border-radius: 5px;
         border-radius: $elevation_2dp;
+        min-width: 22em;
 
         form {
             .form-row {
@@ -491,7 +497,7 @@ section {
                     input[type=submit] {
                         border: none;
                         padding: .5em 4em;
-                        background-color: $primary_dark;
+                        background-color: $primary;
                         color: #fff;
                         box-shadow: $elevation_2dp;
                         cursor: pointer;
@@ -499,7 +505,6 @@ section {
                         &:hover {
                             box-shadow: $elevation_4dp;
                             color: $yellow;
-                            text-decoration: underline;
                         }
                     }
                 }
@@ -511,6 +516,21 @@ section {
     }
 }
 
+footer {
+    display: flex;
+    padding: 2em $section_padding_horizontal_large;
+    background-color: #000;
+    color: #fff;
+
+    .copy, .signature { width: 50%; }
+    .signature { 
+        text-align: right; 
+        a {
+            color: $primary;
+        }
+    }
+
+}
 // -------------------------------------------------------------------------------------------- RESPONSIVE STYLES
 
 // Large tablet version
@@ -602,6 +622,9 @@ section {
         }
     }
 
+    footer {
+        padding: 1em $section_padding_horizontal_large/2;
+    }
 }
 
 // Phone version
@@ -671,6 +694,15 @@ section {
                 text-align: left;
                 margin-bottom: 5em;
             }
+        }
+    }
+
+    footer {
+        flex-direction: column;
+        .copy, .signature { 
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1em;
         }
     }
 }
