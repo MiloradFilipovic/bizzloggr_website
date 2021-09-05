@@ -117,6 +117,19 @@ section {
         align-items: center;
     }
 
+    ul {
+        list-style: none;
+        li { 
+            margin: 1em 0;
+            line-height: 1.7em;
+            &::before {
+                content: "➤";
+                margin-right: .5em;
+                color: $primary;
+            }   
+        }
+    }
+
     &.two_columns {
         .section_content {
             .smaller_col {
@@ -186,19 +199,6 @@ section {
 }
 
 #about {
-    ul {
-        list-style: none;
-        li { 
-            margin: 1em 0;
-            line-height: 1.7em;
-            &::before {
-                content: "➤";
-                margin-right: .5em;
-                color: $primary;
-            }   
-        }
-    }
-
     .screenshot {
         text-align: right;
         img {
@@ -443,6 +443,69 @@ section {
     }
 }
 
+#contact {
+    .contact-form, .contact-info { width: 50%; }
+
+    .contact-form {
+        padding: 1em;
+        background-color: $primary;
+        border-radius: 5px;
+        border-radius: $elevation_2dp;
+
+        form {
+            .form-row {
+                display: flex;
+                padding: .5em;
+                input {
+                    margin: 5px;
+                    font-family: $main_font;
+                    font-size: 1.2em;
+                    border: none;
+                    padding: 5px;
+                }
+                input[type="text"] {
+                    width: 50%;
+                }
+                input[type=email] {
+                    width: 70%;
+                }
+                select {
+                    width: 30%;
+                    margin: 5px;;
+                    padding: 10px;
+                }
+                textarea {
+                    width: 100%;
+                    font-size: 1.2em;
+                    margin: 5px;
+                    padding: 10px;
+                }
+                
+                &.submit {
+                    justify-content: right;
+                    input[type=submit] {
+                        border: none;
+                        padding: .5em 4em;
+                        background-color: $primary_dark;
+                        color: #fff;
+                        box-shadow: $elevation_2dp;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                        &:hover {
+                            box-shadow: $elevation_4dp;
+                            color: $yellow;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact-info {
+        padding-left: 4em;
+    }
+}
+
 // -------------------------------------------------------------------------------------------- RESPONSIVE STYLES
 
 // Large tablet version
@@ -486,18 +549,6 @@ section {
         }
     }
 
-    .intro {
-        text-align: center;
-        height: auto;
-        .intro_image {
-            display: none;
-        }
-        .intro_content {
-            width: 100%;
-            flex-direction: column;       
-        }
-    }
-
     #pricing {
         padding: 5em 2em;
         .pricing_table {
@@ -533,6 +584,19 @@ section {
         }
     }
 
+    #contact {
+        .contact-form {
+            form {
+                .form-row {
+                    flex-direction: column;
+                    input[type="text"], input[type=email], textarea, select {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 // Phone version
@@ -558,6 +622,7 @@ section {
             }
         }
     }
+
     header {
         padding: .5em 1em;
         nav { ul { text-align: left; } }
@@ -565,6 +630,15 @@ section {
 
     .intro {
         padding: $section_padding_horizontal_large/4 $section_padding_horizontal_large/10;
+        text-align: center;
+        height: auto;
+        .intro_image {
+            display: none;
+        }
+        .intro_content {
+            width: 100%;
+            flex-direction: column;       
+        }
     }
 
     #about {
@@ -578,6 +652,20 @@ section {
             align-items: center;
             .pricing_table { display: none; }
             .pricing_mobile { display: block; }
+        }
+    }
+
+    #contact {
+        .section_content {
+            flex-direction: column-reverse;
+
+            .contact-form, .contact-info {
+                width: 100%;
+            }
+            .contact-info {
+                text-align: left;
+                margin-bottom: 5em;
+            }
         }
     }
 }

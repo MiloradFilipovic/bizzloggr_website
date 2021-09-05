@@ -25,9 +25,9 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#pricing">Get Bizzloggr</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -223,6 +223,41 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="section_content">
+            <div class="contact-form">
+                <form name="contact" method="POST" data-netlify="true">
+                    <div class="form-row">
+                        <input type="text" name="first_name" placeholder="First name" required>
+                        <input type="text" name="last_name" placeholder="Last name" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" name="email" placeholder="email" required>
+                        <select name="product">
+                            <option value="bizzloggr">Bizzloggr</option>
+                            <option value="bizzloggr-lite">Bizzloggr Lite</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <textarea name="message" cols="30" rows="10" placeholder="Your message..." required></textarea>
+                    </div>
+                    <div class="form-row submit">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>Here for you</h2>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, laboriosam.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sit dolorem quaerat.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt!</li>
+                </ul>
             </div>
         </div>
     </section>
