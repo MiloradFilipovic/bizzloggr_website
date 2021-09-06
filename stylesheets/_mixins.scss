@@ -41,3 +41,9 @@
         @content;
     }
 }
+
+@mixin tall {
+    @media screen and (min-width: 800px) and (min-height: 800px) {
+        @content;
+    }
+}

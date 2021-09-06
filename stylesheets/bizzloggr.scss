@@ -21,7 +21,7 @@
     }
 
     .intro_content {
-        width: 50%;
+        width: 45%;
         h1, p {
             font-weight: normal;
         }
@@ -425,6 +425,20 @@ footer {
 
 // Tablet version
 @include medium {
+
+    .intro {
+        padding: $section_padding_horizontal_large/4 $section_padding_horizontal_large/10;
+        text-align: center;
+        height: auto;
+        .intro_image {
+            display: none;
+        }
+        .intro_content {
+            width: 100%;
+            flex-direction: column;       
+        }
+    }
+
     #pricing {
         padding: 5em 2em;
         .pricing_table {
@@ -485,19 +499,6 @@ footer {
 
 // Phone version
 @include small {
-
-    .intro {
-        padding: $section_padding_horizontal_large/4 $section_padding_horizontal_large/10;
-        text-align: center;
-        height: auto;
-        .intro_image {
-            display: none;
-        }
-        .intro_content {
-            width: 100%;
-            flex-direction: column;       
-        }
-    }
 
     #about {
         .about { ul { text-align: left; } }
