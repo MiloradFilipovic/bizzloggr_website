@@ -304,6 +304,8 @@
 }
 
 #contact {
+     padding: $section_padding_vertical_large $section_padding_horizontal_large/2;
+
     .contact-form, .contact-info { width: 50%; }
     background-color: $primary_dark;
     color: #fff;
