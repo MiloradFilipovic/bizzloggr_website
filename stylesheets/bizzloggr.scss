@@ -461,6 +461,7 @@ footer {
     }
 
     #contact {
+        padding: 1em;
         .contact-form {
             form {
                 .form-row {
@@ -471,6 +472,7 @@ footer {
                     &.submit {
                         padding: 0;
                     }
+                    input, select, textarea { margin: 0; }
                 }
             }
         }
