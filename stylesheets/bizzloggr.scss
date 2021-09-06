@@ -466,6 +466,10 @@ footer {
                     input[type="text"], input[type=email], textarea, select {
                         width: 100%;
                     }
+                    &.submit {
+                        padding: 0;
+                        .recaptcha { margin: 0 auto; }
+                    }
                 }
             }
         }
