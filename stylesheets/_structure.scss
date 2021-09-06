@@ -1,0 +1,216 @@
+@import "vars";
+@import "mixins";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $main_font;
+    color: $secondary_text;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: $primary;
+    color: #fff;
+    padding: 0.5em $intro_padding_horizontal_large;
+    @include clearfix;
+
+    &.shadow {
+        -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+        -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+        box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    }
+
+    .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+        a {
+            color: $yellow;
+            text-decoration: none;
+            float: left;
+
+            img {
+                height: 2em;
+                float: left;
+            }
+            span {
+                display: table-cell;
+                vertical-align: middle;
+                height: 2em;
+                padding-left: .2em;
+            }
+        }
+    }
+
+
+    nav {
+        float: right;
+        overflow: hidden;
+        ul {
+            li {
+                display: inline-block;
+                margin-left: 1em;
+                a {
+                    text-transform: uppercase;
+                    color: #fff;
+                    text-decoration: none;
+                    line-height: 3em;
+
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu_button {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    line-height: 2em;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    &::after { content: "☰"; }
+}
+
+.menu_checkbox {
+    display: none;
+    &:checked {
+        & ~ .dropdown {
+            transition: height 0.2s, opacity 0.3s linear;
+            height: 15em;
+            opacity: 1;
+            margin-top: 1em;
+        }
+        & + .menu_button:after { content: "✕"; }
+    }
+}
+
+section {
+    padding: $section_padding_vertical_large $section_padding_horizontal_large; //10em 20em
+
+    h2 {
+        width: 100%;
+        font-size: 2em;
+        font-family: $heading_font;
+        color: $black;
+        margin-bottom: 2em;
+    }
+
+    p { text-align: justify; }
+
+    .section_content {
+        display: flex;
+        margin: 0 auto;
+        max-width: 75em;
+        align-items: center;
+    }
+
+    ul {
+        list-style: none;
+        li { 
+            margin: 1em 0;
+            line-height: 1.7em;
+            &::before {
+                content: "➤";
+                margin-right: .5em;
+                color: $primary;
+            }   
+        }
+    }
+
+    &.two_columns {
+        .section_content {
+            .smaller_col {
+                width: 40%;
+            }
+
+            .wider_col {
+                width: 60%;
+                border-right: 1px solid #ccc;
+                padding-right: 3em;
+            }
+        }
+    }
+}
+
+// -------------------------------------------------------------------------------------------- RESPONSIVE STYLES
+
+// Large tablet version
+@include large {
+    section {
+        padding: $section_padding_horizontal_large/2 $section_padding_horizontal_large/2;
+    }
+    header { padding: .5em 5em; }
+}
+
+// Tablet version
+@include medium {
+    section { padding: $section_padding_vertical_large/2; }
+
+    header {
+        .menu_button {
+            display: block;
+            float: right;
+        }
+
+        nav {
+            width: 100%;
+            height: 0em;
+            opacity: 0;
+            transition: height 0.2s, opacity 0s linear;
+
+            ul {
+                width: 100%;
+                text-align: center;
+
+                li {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+// Phone version
+@include small {
+    section {
+        padding: $section_padding_horizontal_large/10;;
+        text-align: center;
+
+        &.two_columns {
+            .section_content {
+                flex-direction: column;
+                .wider_col, .smaller_col { width: 100%; }
+                .first {
+                    margin-bottom: 2em;
+                    border-right: none;
+                    padding: 0;
+                }
+    
+                .second {
+                    border-top: 1px solid #ccc;
+                    padding-top: 2em;
+                }
+            }
+        }
+    }
+
+    header {
+        padding: .5em 1em;
+        nav { ul { text-align: left; } }
+    }
+}

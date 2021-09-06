@@ -37,7 +37,7 @@
 }
 
 @mixin narrow {
-    @media screen and (min-height: 1200px) {
+    @media screen and (max-height: 500px) {
         @content;
     }
 }
