@@ -35,7 +35,8 @@ header {
     .logo {
         font-size: 2em;
         font-weight: bold;
-        font-family: $heading_font;
+        font-family: $logo_font;
+        text-transform: uppercase;
         a {
             color: $yellow;
             text-decoration: none;
@@ -107,7 +108,7 @@ section {
         font-size: 2em;
         color: $black;
         margin-bottom: 2em;
-        font-family: $heading_font
+        font-family: $main_font
     }
 
     p { text-align: justify; }

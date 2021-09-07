@@ -38,10 +38,10 @@
         h1 {
             margin-bottom: 0.3em;
             font-size: 5em;
-            // text-transform: uppercase;
+            text-transform: uppercase;
             font-weight: bold;
             color: $yellow;
-            font-family: $heading_font
+            font-family: $logo_font;
         }
     
         .google_play_badge {
@@ -386,11 +386,12 @@
         padding-top: 1em;
 
         h2 {
-            font-family: $heading_font;
-            font-size: 3em;
+            font-size: 5em;
+            font-family: $contact_heading_font;
             font-weight: normal;
             color: $yellow;
-            margin-bottom: 1em;
+            margin-bottom: .5em;
+            // transform: rotate(-4deg);
         }
 
         .contact_list {
@@ -529,7 +530,9 @@ footer {
                 text-align: left;
                 padding-left: 0;
 
-                h2 { font-size: 3em; }
+                h2 { 
+                    font-size: 4em; 
+                }
             }
         }
     }
