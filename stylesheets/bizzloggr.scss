@@ -39,7 +39,6 @@
             margin-bottom: 0.3em;
             font-size: 5em;
             text-transform: uppercase;
-            font-weight: bold;
             color: $yellow;
             font-family: $logo_font;
         }
@@ -504,6 +503,14 @@ footer {
 
 // Phone version
 @include small {
+
+    .intro {
+        .intro_content {
+            h1 {
+                font-size: 4em;
+            }
+        }
+    }
 
     #about {
         .about { ul { text-align: left; } }

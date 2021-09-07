@@ -38,9 +38,9 @@ header {
 
     .logo {
         font-size: 2em;
-        font-weight: bold;
+        font-weight: normal;
         font-family: $logo_font;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         a {
             display: flex;
             align-items: center;
