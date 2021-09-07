@@ -38,18 +38,15 @@ header {
         font-family: $logo_font;
         text-transform: uppercase;
         a {
+            display: flex;
+            align-items: center;
             color: $yellow;
             text-decoration: none;
-            float: left;
 
             img {
                 height: 2em;
-                float: left;
             }
             span {
-                display: table-cell;
-                vertical-align: middle;
-                height: 2em;
                 padding-left: .2em;
             }
         }
