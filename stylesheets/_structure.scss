@@ -40,12 +40,12 @@ header {
         font-size: 2em;
         font-weight: normal;
         font-family: $logo_font;
-        // text-transform: uppercase;
         a {
             display: flex;
             align-items: center;
-            color: $yellow;
+            color: $grey_light;
             text-decoration: none;
+            &:hover { color: $yellow; }
 
             img {
                 height: 2em;
