@@ -37,10 +37,11 @@
 
         h1 {
             margin-bottom: 0.3em;
-            font-size: 3em;
-            text-transform: uppercase;
+            font-size: 5em;
+            // text-transform: uppercase;
             font-weight: bold;
             color: $yellow;
+            font-family: $heading_font
         }
     
         .google_play_badge {
@@ -385,8 +386,11 @@
         padding-top: 1em;
 
         h2 {
+            font-family: $heading_font;
+            font-size: 3em;
+            font-weight: normal;
             color: $yellow;
-            margin-bottom: 1.5em;
+            margin-bottom: 1em;
         }
 
         .contact_list {
@@ -524,6 +528,8 @@ footer {
             .contact-info {
                 text-align: left;
                 padding-left: 0;
+
+                h2 { font-size: 3em; }
             }
         }
     }
