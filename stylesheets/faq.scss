@@ -1,7 +1,7 @@
 @import 'structure';
 
 body {
-    background-color: $grey_light;
+    // background-color: $grey_light;
 }
 
 #faq {
@@ -9,7 +9,9 @@ body {
     padding: $section_padding_vertical_large/2;
 
     h1 {
-        margin-bottom: 1em;
+        width: 100%;
+        margin-bottom: 2em;
+        color: $black;
     }
 
     .section_content {
@@ -20,56 +22,71 @@ body {
 
 
 .question-card {
-    background-color: #fff;
-    box-shadow: $elevation_2dp;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
+    margin: .5em 0;
 
-    .dropdown {
-        height: 0em;
-        padding: 0;
-        opacity: 0;
-        transition: height 0.2s, opacity 0s linear;
-    }
-    
-    .menu_button {
-        user-select: none;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        -webkit-tap-highlight-color: transparent;
-        line-height: normal;
-        &::after { content: "..."; }
-    }
-    
-    .menu_checkbox {
-        display: none;
-        &:checked {
-            & ~ .dropdown {
-                height: auto;
-                padding: 1em;
-                opacity: 1;
-                margin-top: 0;
-            }
-            & + .menu_button:after { content: "..."; }
+    .question {
+        width: 90%;
+        padding: .5em;
+        font-size: 1.2em;
+        color: $black;
+
+        p:before {
+            content: "Q:";
+            color: $primary;
+            margin-right: .5em;
         }
     }
 
-    .question {
-        font-size: 1.2em;
-        background-color: $primary;
-        color: #fff;
-        font-weight: bold;
-        padding: 1em;
-    }
-    label {
-        color: $black;
+    .separator {
         width: 100%;
-        text-align: center;
-        display: block;
+        border-top: 1px solid $secondary_text;
+        margin-bottom: .5em;
+    }
+
+    .answer {
+        width: 100%;
+        font-size: 1.1em;
+        padding: .5em;
+        display: none;
+        p:before {
+            content: "A:";
+            color: $primary;
+            margin-right: .5em;
+        }
+    }
+
+    .toggle { display: none; }
+    .toggle_button {
+        width: 2%;
+        color: $primary;
+        cursor: pointer;
+        margin-right: .5em;
+
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 1.5em;
+            content: "\f078";
+        }
+    }
+
+    .toggle:checked {
+        & ~ .dropdown { display: block; }
+        & ~ label::before { content: "\f077"; }
     }
 }
 
 @include small {
-    #faq { padding: 1em; }
+    #faq { 
+        padding: 3em 1em; 
+        h1 { text-align: center; }
+        .question-card {
+            .question, .answer { font-size: 1em; }
+        }
+    }
 }
