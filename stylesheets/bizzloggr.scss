@@ -83,17 +83,21 @@
     position: relative;
     padding: $section_padding_vertical_large $section_padding_horizontal_large/2; //10em 20em
 
-    h2 {
+    .pricing_heading {
         position: absolute;
         top: -10px;
         left: 15vw;
+        filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.14));
+    }
+
+    h2 {
         width: auto;
         text-align: left;
-        padding: 2em .5em 1.2em;
+        font-size: 2em;
+        padding: 2em .5em 1.5em;
         color: #fff;
         background-color: $primary;
-        font-size: 2em;
-        box-shadow: $elevation_4dp;
+        border-radius: 5px 5px 0 0;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 91%);
     }
