@@ -292,7 +292,7 @@
                 align-items: center;
                 img { width: 5em; };
                 span {
-                    font-size: 1.5em;
+                    font-size: 2em;
                     font-weight: bold;
                     margin-top: .5em;
                 }
@@ -314,6 +314,7 @@
                 text-transform: uppercase;
                 text-align: center;
                 line-height: 1.5em;
+                font-size: 1.3em;
             }
             &.lite { background-color: $lite_primary; }
             &.pro { background-color: $primary; }
@@ -479,8 +480,8 @@ footer {
     #pricing {
         padding: 5em 2em;
 
-        h2 {
-            left: 2em;
+        .pricing_heading {
+            left: 5em;
         }
 
         .pricing_table {
@@ -556,14 +557,16 @@ footer {
     }
 
     #pricing {
-        h2 {
+        .pricing_heading {
             position: initial;
+            filter: none;
+        }
+        
+        h2 {
             background: none;
             color: $secondary_text;
             text-align: center;
             padding: 1em;
-            margin-bottom: 1em;
-
             br { display: none; }
         }
 
