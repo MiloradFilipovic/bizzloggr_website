@@ -45,6 +45,7 @@ header {
             align-items: center;
             color: $grey_light;
             text-decoration: none;
+            text-transform: uppercase;
             &:hover { color: $yellow; }
 
             img {

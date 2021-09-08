@@ -59,6 +59,14 @@
 }
 
 #about {
+    h2 {
+        margin-bottom: 1em;
+    }
+    ul {
+        li {
+            font-size: 1.1em;
+        }
+    }
     .screenshot {
         text-align: right;
         img {
@@ -72,8 +80,23 @@
 #pricing {
     text-align: center;
     background-color: $grey_light;
-    overflow-x: auto;
+    position: relative;
     padding: $section_padding_vertical_large $section_padding_horizontal_large/2; //10em 20em
+
+    h2 {
+        position: absolute;
+        top: -10px;
+        left: 15vw;
+        width: auto;
+        text-align: left;
+        padding: 2em .5em 1.2em;
+        color: #fff;
+        background-color: $primary;
+        font-size: 2em;
+        box-shadow: $elevation_4dp;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 91%);
+    }
 
     .section_content {
         align-items: flex-start;
@@ -179,11 +202,17 @@
                         }
                         &.lite {
                             div.price_wrapper { background-color: $lite_primary_dark; }
-                            div.price_tag { background-color: $lite_primary; }
+                            div.price_tag {
+                                // background-color: $lite_primary;
+                                background-image: linear-gradient(to right bottom, #2196f3, #1f8eeb, #1d86e3, #1b7eda, #1976d2);
+                            }
                         }
                         &.pro {
                             div.price_wrapper { background-color: $primary_dark; }
-                            div.price_tag { background-color: $primary; }
+                            div.price_tag { 
+                                // background-color: $primary;
+                                background-image: linear-gradient(to right bottom, #e91e63, #df1c61, #d51b5f, #cc195d, #c2185b);
+                            }
                         }
                     }
                 }
@@ -445,6 +474,11 @@ footer {
 
     #pricing {
         padding: 5em 2em;
+
+        h2 {
+            left: 2em;
+        }
+
         .pricing_table {
             width: 100%;
             thead {
@@ -518,6 +552,17 @@ footer {
     }
 
     #pricing {
+        h2 {
+            position: initial;
+            background: none;
+            color: $secondary_text;
+            text-align: center;
+            padding: 1em;
+            margin-bottom: 1em;
+
+            br { display: none; }
+        }
+
         .section_content {
             flex-direction: column;
             align-items: center;
