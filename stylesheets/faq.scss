@@ -28,6 +28,12 @@
             &:visited { color: $lite_primary_dark; }
         }
     }
+
+    .notice {
+        margin: 5em 0 0;
+        font-size: 1.2em;
+        color: $black;
+    }
 }
 
 
