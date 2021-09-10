@@ -25,11 +25,11 @@
         <label for="menu_checkbox" class="menu_button"></label>
         <nav class="dropdown">
             <ul>
-                <li><a href="/index.html">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/index.html#pricing">Get Bizzloggr</a></li>
                 <li><a href="#">FAQ</a></li>
-                <li><a href="/privacy.html">Privacy Policy</a></li>
-                <li><a href="/index.html#contact">Contact</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -37,6 +37,7 @@
         <div class="section_content">
             <h1>Frequently asked questions</h1>
 
+            <h2>About BizzLoggr</h2>
             <div class="question-card">
                 <div class="question">
                     <p>Can you describe Bizzloggr in a few sentences for me?</p>
@@ -46,7 +47,21 @@
                 <div class="separator"></div>
                 <div class="answer dropdown">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti voluptatem architecto sit nihil perspiciatis id vitae fuga impedit! Neque voluptatibus cum deserunt nemo, odio sequi nesciunt! Neque, sint veritatis!
+                        It's a mobile app that will scan your phone's call log and identify all business numbers you don't have in your contacts. You can use it to see places and businesses you occasionally interact with but not often enough to remember to save them in contacts, to find out time or frequency of your calls to a particular place, or just if you are curious and want to see what your call log has become over the years.
+                        It can also help you better organize identified places and provide some useful features like showing place on map or adding it to contacts with the gathered data already set up.
+                    </p>
+                </div>
+            </div>
+            <div class="question-card">
+                <div class="question">
+                    <p>Who is this app for?</p>
+                </div>
+                <input type="checkbox" name="cb_toggle2" id="cb_toggle2" class="toggle">
+                <label for="cb_toggle2" class="toggle_button"></label>
+                <div class="separator"></div>
+                <div class="answer dropdown">
+                    <p>
+                        Bizzloggr can be useful to anyone who makes calls with their phone. It is perfect if you don't have the habit to add random places you contact occasionally to your phonebook. It can help you find a certain place you contacted a while ago, or to remember when was the last time you called it. Once you have the places identified, you can use and arrange them the way you want. For business people, it can provide valuable information about your business clients and your interaction history with them.
                     </p>
                 </div>
             </div>
@@ -54,12 +69,82 @@
                 <div class="question">
                     <p>What kind of phone numbers can Bizzloggr identify?</p>
                 </div>
-                <input type="checkbox" name="cb_toggle2" id="cb_toggle2" class="toggle">
-                <label for="cb_toggle2" class="toggle_button"></label>
+                <input type="checkbox" name="cb_toggle3" id="cb_toggle3" class="toggle">
+                <label for="cb_toggle3" class="toggle_button"></label>
                 <div class="separator"></div>
                 <div class="answer dropdown">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti voluptatem architecto sit nihil perspiciatis id vitae fuga impedit! Neque voluptatibus cum deserunt nemo, odio sequi nesciunt! Neque, sint veritatis!
+                        Bizzloggr is able to identify business numbers that are registered on map services like <i>Google maps</i> or <i>Bing maps</i>. It is not intended to be used for personal numbers unless they are associated with a place on a map. Places data is usually provided by general public users or business owners and it's accuracy may vary.
+                    </p>
+                </div>
+            </div>
+            <div class="question-card">
+                <div class="question">
+                    <p>Why are there two versions of this app?</p>
+                </div>
+                <input type="checkbox" name="cb_toggle4" id="cb_toggle4" class="toggle">
+                <label for="cb_toggle4" class="toggle_button"></label>
+                <div class="separator"></div>
+                <div class="answer dropdown">
+                    <p>
+                        <a href="https://play.google.com/store/apps/details?id=net.miloradfilipovic.bizzloggrlite" target="_blank" rel="noopener noreferrer" class="lite">Bizzloggr Lite</a> is a free version intended to give you a sneak peak of what the app looks and works like before you decide to buy it. However, it is only able to process calls made during the last month and it lacks additional features like favorite places or detailed call history for a selected place. <a href="https://play.google.com/store/apps/details?id=net.miloradfilipovic.bizzloggr" target="_blank" rel="noopener noreferrer">Bizzloggr</a> is the full version of this app which provides the complete Bizzloggr experience including unlimited call history and all of the <a href="/index.html#pricing">features</a> which help you get a better overview and organize your places to your liking. We will keep improving the app by adding more useful stuff in the future updates for the full version, while Bizzloggr Lite will receive only the most crucial ones.
+                    </p>
+                </div>
+            </div>
+            <div class="question-card">
+                <div class="question">
+                    <p>Why do I have to pay for the full version?</p>
+                </div>
+                <input type="checkbox" name="cb_toggle5" id="cb_toggle5" class="toggle">
+                <label for="cb_toggle5" class="toggle_button"></label>
+                <div class="separator"></div>
+                <div class="answer dropdown">
+                    <p>
+                        Good question. First of all, the data provided by the app is not free to get. Service providers we use will charge to identify each number in you call log and the app price is estimated based on that costs. Regardless, making such a nice app takes time and effort and it always good to support the developers for providing awesome solutions and experiences.
+                    </p>
+                </div>
+            </div>
+
+            <h2>Privacy and security</h2>
+
+            <div class="question-card">
+                <div class="question">
+                    <p>Should I feel safe giving permissions to this app on my phone?</p>
+                </div>
+                <input type="checkbox" name="cb_toggle6" id="cb_toggle6" class="toggle">
+                <label for="cb_toggle6" class="toggle_button"></label>
+                <div class="separator"></div>
+                <div class="answer dropdown">
+                    <p>
+                        In order to identify the numbers Bizzloggr has to access your phone's call log so this permission is a part of the core functionality of the app. We are committed to keep minimal permission requirements and take care of your private data so, other than using phone numbers from your log to get the place information, the app is not using call history data in any other way. Other than that, the app needs the permission to access the internet so it can fetch place data for each call. So, as you can see, Bizzloggr only ask you to allow it to do it's job: List your calls and try to identify them. Nothing more.
+                    </p>
+                </div>
+            </div>
+            <div class="question-card">
+                <div class="question">
+                    <p>What happens to my private data the app has access to?</p>
+                </div>
+                <input type="checkbox" name="cb_toggle7" id="cb_toggle7" class="toggle">
+                <label for="cb_toggle7" class="toggle_button"></label>
+                <div class="separator"></div>
+                <div class="answer dropdown">
+                    <p>
+                        Nothing. All data about calls you made stays with you. Bizzloggr app is not storing it in our database or using it in any other way than intended. Please read our <a href="/privacy">Privacy policy</a> to get the detailed understanding about the way we treat your private information.
+                    </p>
+                </div>
+            </div>
+
+            <h2>Troubleshooting</h2>
+            <div class="question-card">
+                <div class="question">
+                    <p>I got no results, help!</p>
+                </div>
+                <input type="checkbox" name="cb_toggle8" id="cb_toggle8" class="toggle">
+                <label for="cb_toggle8" class="toggle_button"></label>
+                <div class="separator"></div>
+                <div class="answer dropdown">
+                    <p>
+                        First of all, make sure you have a working and stable internet connection. If that's the case, try uninstalling the app and installing it again (don't worry, you won't be charged again if you already purchased the app). In some cases, Bizzloggr will not be able to identify the numbers made by your previous SIM card(s) especially if they were not from your current operator or country. In the end, maybe you just don't have any identifiable numbers in your call log.
                     </p>
                 </div>
             </div>
@@ -67,16 +152,24 @@
                 <div class="question">
                     <p>Why are some places gone from my list?</p>
                 </div>
-                <input type="checkbox" name="cb_toggle3" id="cb_toggle3" class="toggle">
-                <label for="cb_toggle3" class="toggle_button"></label>
+                <input type="checkbox" name="cb_toggle9" id="cb_toggle9" class="toggle">
+                <label for="cb_toggle9" class="toggle_button"></label>
                 <div class="separator"></div>
                 <div class="answer dropdown">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deleniti voluptatem architecto sit nihil perspiciatis id vitae fuga impedit! Neque voluptatibus cum deserunt nemo, odio sequi nesciunt! Neque, sint veritatis!
+                        Bizzloggr is always processing calls from your phone's call log, so if you have deleted a call in your default dialing app, the associated place will also disappear from Bizzloggr place list if there are not other calls to it.
                     </p>
                 </div>
             </div>
         </div>
     </section>
+    <footer>
+        <div class="copy">
+            &copy; 2021 Bizzloggr
+        </div>
+        <div class="signature">
+            Handmade by <a href="https://miloradfilipovic.net" target="_blank">Milorad Filipović</a>
+        </div>
+    </footer>
 </body>
 </html>

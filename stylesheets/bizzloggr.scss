@@ -436,21 +436,6 @@
     }
 }
 
-footer {
-    display: flex;
-    padding: 2em $section_padding_horizontal_large;
-    background-color: $black;
-    color: #fff;
-
-    .copy, .signature { width: 50%; }
-    .signature { 
-        text-align: right; 
-        a {
-            color: $primary;
-        }
-    }
-
-}
 // -------------------------------------------------------------------------------------------- RESPONSIVE STYLES
 
 // Large tablet version
@@ -534,10 +519,6 @@ footer {
             }
         }
     }
-
-    footer {
-        padding: 1em $section_padding_horizontal_large/2;
-    }
 }
 
 // Phone version
@@ -594,16 +575,6 @@ footer {
                 }
             }
         }
-    }
-
-    footer {
-        flex-direction: column;
-        padding: 1em;
-        .copy, .signature { 
-            width: 100%;
-            text-align: center;
-        }
-        .copy { margin-bottom: 1em; }
     }
 }
 
