@@ -1,1 +1,9 @@
 @import 'structure';
+
+@include medium {
+    #privacy {
+        padding-top: 7em;
+        text-align: left;
+    }
+}
+
