@@ -1,21 +1,592 @@
-$very_dark_grey: #303030;
+@import 'structure';
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: $very_dark_grey;
-}
-
-.content {
+.intro {
+    display: flex;
+    align-items: center;
     height: 90vh;
-    margin: 2% auto;
+    padding: 3em $intro_padding_horizontal_large;
+    margin-top: 4em;
+    background-color: $primary_dark;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    color: #fff;
 
-    background-image: url(../images/temp_banner.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    .intro_image {
+        position: absolute;
+        height: 80%;
+        width: 122vh;
+        right: -40vh;
+        bottom: 0;
+    }
+
+    .intro_content {
+        width: 45%;
+        h1, p {
+            font-weight: normal;
+        }
+    
+        p {
+            font-size: 1.2em;
+            &.cta {
+                color: $yellow;
+                margin-top: .5em;
+                font-size: 1.2em;
+            }
+        }
+
+        h1 {
+            margin-bottom: 0.3em;
+            font-size: 5em;
+            text-transform: uppercase;
+            color: $grey_light;
+            font-family: $logo_font;
+        }
+    
+        .google_play_badge {
+            display: inline-block;
+            min-width: 15em;
+            width: 30%;
+            max-width: 25em;
+            margin-top: 2em;
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+
+}
+
+#about {
+    h2 {
+        margin-bottom: 1em;
+    }
+    ul {
+        li {
+            font-size: 1.1em;
+        }
+    }
+    .screenshot {
+        text-align: right;
+        img {
+            width: 70%;
+            max-width: 30em;
+        }
+    }
+}
+
+
+#pricing {
+    text-align: center;
+    background-color: $grey_light;
+    position: relative;
+    padding: $section_padding_vertical_large $section_padding_horizontal_large/2; //10em 20em
+
+    .pricing_heading {
+        position: absolute;
+        top: -10px;
+        left: 15vw;
+        filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.14));
+    }
+
+    h2 {
+        width: auto;
+        text-align: left;
+        font-size: 2em;
+        padding: 2em .5em 1.5em;
+        color: #fff;
+        background-color: $primary;
+        border-radius: 5px 5px 0 0;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 91%);
+    }
+
+    .section_content {
+        align-items: flex-start;
+    }
+
+    .price_tag {
+        display: flex;
+        padding: 2.25em 4em;
+        align-items: center;
+        justify-content: center;
+        box-shadow: $elevation_4dp;
+        position: relative;
+        top: 1em;
+        span {
+            font-size: 3em;
+            font-weight: normal;
+        }
+
+        &.pro {
+            align-items: flex-start;
+            padding: 1.25em 4em;
+            span {
+                &.amount {
+                    font-size: 4.5em;
+                }
+                &.superscript {
+                    font-size: 1.5em;
+                    padding-top: .6em;
+                    
+                    &.currency { margin-right: -0.2em;}
+                }
+            }
+        }
+    }
+
+    .pricing_table {
+        margin: 0 auto;
+        border-collapse: collapse;
+
+        th, td { padding: 1em; }
+        .blank { visibility: hidden; }
+
+        thead {
+            tr {
+                color: #fff;
+                &.logo {
+                    th.logo {
+                        padding-bottom: 0;
+                        &.lite {
+                            div {
+                                background-color: $lite_primary_dark;
+                            }
+                        }
+                        &.pro {
+                            div {
+                                background-color: $primary_dark;
+                            }
+                        }
+                        div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding:  1em;
+                            border-radius: 5px 5px 0 0;
+                            min-width: 20em;
+                            img { width: 4em; }
+                            span {
+                                display: inline-block;
+                                margin-left: 0.5em;
+                                font-size: 1.5em;
+                            }
+                        }
+                    }
+                }
+                &.descr {
+                    th {
+                        padding: 0 1em;
+                        text-transform: uppercase;
+                        font-weight: normal;
+                        div {
+                            padding: .5em;
+                            box-shadow: $elevation_2dp;
+                        }
+                        &.lite {
+                            div {
+                                background-color: $lite_primary;
+                            }
+                        }
+                        &.pro {
+                            div {
+                                background-color: $primary;
+                            }
+                        }
+                    }
+                }
+                &.price {
+                    th {
+                        padding: 0 1em;
+                        div.price_wrapper {
+                            padding: 0 em 0;
+                            display: flex;
+                            justify-content: center;
+                        }
+                        &.lite {
+                            div.price_wrapper { background-color: $lite_primary_dark; }
+                            div.price_tag {
+                                // background-color: $lite_primary;
+                                background-image: linear-gradient(to right bottom, #2196f3, #1f8eeb, #1d86e3, #1b7eda, #1976d2);
+                            }
+                        }
+                        &.pro {
+                            div.price_wrapper { background-color: $primary_dark; }
+                            div.price_tag { 
+                                // background-color: $primary;
+                                background-image: linear-gradient(to right bottom, #e91e63, #df1c61, #d51b5f, #cc195d, #c2185b);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        tbody {
+            background-color: #fff;
+            box-shadow: $elevation_2dp;
+            tr {
+                border-bottom: 1px solid #ccc;
+                vertical-align: middle;
+                td.no, td.yes { 
+                    font-weight: bold;
+                    font-size: 1.5em;
+                }
+                td.no { color: $red; }
+                td.yes { color: $green; }
+                td.feature_column {
+                    .feature_title {
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                    .feature_descr {
+                        font-style: italic;
+                    }
+                    text-align: right;
+                }
+                &.spacer {  height: .5em; }
+                &.no_border { border: none; }
+            }
+        }
+        tfoot {
+            td.blank { background-color: $grey_light; }
+            tr.play_store {
+                td {
+                    padding: 0 1em;
+                    div {
+                        padding: .5em;
+                        border-radius: 0 0 5px 5px;
+                    }
+                }
+                td.lite { 
+                    div { background-color: $lite_primary; }
+                }
+                td.pro { 
+                    div { background-color: $primary; }
+                }
+                img { width: 10em; }
+            }
+        }
+    }
+
+    .pricing_mobile {
+        display: none;
+        width: 100%;
+
+        .mobile_price {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 5px;
+            width: 90%;
+            max-width: 32em;
+            color: #fff;
+            margin: 0 auto;
+            box-shadow: $elevation_2dp;
+
+            .logo {
+                padding: 1em;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img { width: 5em; };
+                span {
+                    font-size: 2em;
+                    font-weight: bold;
+                    margin-top: .5em;
+                }
+            }
+
+            &.lite {
+                background-color: $lite_primary_dark;
+                margin-bottom: 2em;
+            }
+            &.pro {
+                background-color: $primary_dark;
+            }
+        }
+        .mobile_descr {
+            width: 100%;
+            padding: .5em;
+            
+            p {
+                text-transform: uppercase;
+                text-align: center;
+                line-height: 1.5em;
+                font-size: 1.3em;
+            }
+            &.lite { background-color: $lite_primary; }
+            &.pro { background-color: $primary; }
+        }
+        .price_wrapper {
+            padding: 2em 1em;
+            .price_tag { 
+                position: initial; 
+                &.lite { background-color: $lite_primary; }
+                &.pro { background-color: $primary; }
+            }
+        }
+        .mobile_price_footer {
+            padding: 1em;
+            border-radius: 0 0 5px 5px;
+            img { width: 80%; }
+            &.lite { background-color: $lite_primary; }
+            &.pro { background-color: $primary; }
+        }
+    }
+}
+
+#contact {
+     padding: $section_padding_vertical_large $section_padding_horizontal_large/4;
+
+    .contact-form, .contact-info { width: 50%; }
+    background-color: $primary_dark;
+    color: #fff;
+
+    li:before {
+        color: $grey_light;
+    }
+
+    .contact-form {
+        padding: 1em;
+        border-radius: 5px;
+        border-radius: $elevation_2dp;
+        min-width: 22em;
+
+        form {
+            .form-row {
+                display: flex;
+                padding: .5em;
+                input {
+                    margin: 5px;
+                    font-family: $main_font;
+                    font-size: 1.2em;
+                    border: none;
+                    padding: 5px 1em;
+                    color: $black;
+                }
+                input[type="text"] {
+                    width: 50%;
+                }
+                input[type=email] {
+                    width: 70%;
+                }
+                select {
+                    width: 30%;
+                    margin: 5px;;
+                    padding: 10px;
+                    color: $black;
+                    background-color: #fff;
+                    border: none;
+                }
+                textarea {
+                    width: 100%;
+                    font-size: 1.2em;
+                    margin: 5px;
+                    padding: 10px;
+                    font-family: $main_font;
+                    color: $black;
+                }
+                
+                &.submit {
+                    align-content: center;
+                    .recaptcha {
+                        width: 70%;
+                        padding: 10px;
+                        color: #fff;
+                    }
+                    input[type=submit] {
+                        border: none;
+                        padding: .5em 4em;
+                        background-color: $primary;
+                        color: #fff;
+                        box-shadow: $elevation_2dp;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                        &:hover {
+                            box-shadow: $elevation_4dp;
+                            color: $yellow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact-info {
+        padding-left: 4em;
+        align-self: flex-start;
+        padding-top: 1em;
+
+        h2 {
+            font-size: 5em;
+            font-family: $contact_heading_font;
+            font-weight: normal;
+            color: $yellow;
+            margin-bottom: .5em;
+            // transform: rotate(-4deg);
+        }
+
+        .contact_list {
+            margin-top: 3em;
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+// -------------------------------------------------------------------------------------------- RESPONSIVE STYLES
+
+// Large tablet version
+@include large {
+    .intro {
+        padding: $intro_padding_horizontal_large/2;
+        .intro_image { transform: translateX(15%); }
+    }
+}
+
+// Tablet version
+@include medium {
+
+    .intro {
+        padding: $section_padding_horizontal_large/4 $section_padding_horizontal_large/10;
+        text-align: center;
+        height: auto;
+        .intro_image {
+            display: none;
+        }
+        .intro_content {
+            width: 100%;
+            flex-direction: column;       
+        }
+    }
+
+    #pricing {
+        padding: 5em 2em;
+
+        .pricing_heading {
+            left: 5em;
+        }
+
+        .pricing_table {
+            width: 100%;
+            thead {
+                tr.logo th.logo {
+                    div {
+                        flex-direction: column;
+                        min-width: auto;
+                        span {
+                            margin-top: .5em;
+                            margin-left: 0;
+                        }
+                    }
+                }
+                tr.price th {
+                    div.price_wrapper {
+                        .price_tag {
+                            &.lite {
+                                padding: 2em;
+                            }
+                            padding: 1em 2em;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr td.feature_column {
+                    .feature_title { margin-bottom: 0; }
+                    .feature_descr { display: none; }
+                }
+            }
+        }
+    }
+
+    #contact {
+        padding: 1em;
+        .contact-form {
+            form {
+                .form-row {
+                    flex-direction: column;
+                    input[type="text"], input[type=email], textarea, select {
+                        width: 100%;
+                    }
+                    &.submit {
+                        padding: 0;
+                    }
+                    input, select, textarea { margin: 5px 0; }
+                }
+            }
+        }
+    }
+}
+
+// Phone version
+@include small {
+
+    .intro {
+        .intro_content {
+            h1 {
+                font-size: 4em;
+            }
+        }
+    }
+
+    #about {
+        .about { ul { text-align: left; } }
+        .screenshot { text-align: center; }
+    }
+
+    #pricing {
+        .pricing_heading {
+            position: initial;
+            filter: none;
+        }
+        
+        h2 {
+            background: none;
+            color: $secondary_text;
+            text-align: center;
+            padding: 1em;
+            br { display: none; }
+        }
+
+        .section_content {
+            flex-direction: column;
+            align-items: center;
+            .pricing_table { display: none; }
+            .pricing_mobile { display: block; }
+        }
+    }
+
+    #contact {
+        .section_content {
+            flex-direction: column-reverse;
+
+            .contact-form, .contact-info {
+                width: 100%;
+            }
+            .contact-info {
+                text-align: left;
+                padding-left: 0;
+
+                h2 { 
+                    font-size: 4em; 
+                }
+            }
+        }
+    }
+}
+
+@include narrow {
+    .intro {
+        .intro_content {
+            p { font-size: 1em; }
+            h1, p.cta { display: none; }
+            a.google_play_badge {
+                min-width: 10em;
+                margin-top: 1em;
+            }
+        }
+    }
 }

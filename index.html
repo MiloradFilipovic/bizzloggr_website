@@ -4,12 +4,279 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizzLoggr</title>
+    <meta name="description" content="Bizzloggr is a mobile app that can identify and show all business places you called but don't have saved in your contacts. It can help you keep track of your interactions and enables you to organize identified places just the way you want it. ">
+    <title>BizzLoggr app | Home</title>
     <link rel="stylesheet" href="css/bizzloggr.css">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Nunito+Sans&family=Passion+One&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <div class="content">
-    </div>
+    <header class="shadow">
+        <div class="logo">
+            <a href="#">
+                <img src="images/favicon.png" alt="BizzLoggr logo">
+                <span>Bizzloggr</span>
+            </a>
+        </div>
+        <input type="checkbox" class="menu_checkbox" id="menu_checkbox">
+        <label for="menu_checkbox" class="menu_button"></label>
+        <nav class="dropdown">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#pricing">Get Bizzloggr</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="intro">
+        <img src="images/banner.png" alt="BizzLoggr logo" class="intro_image">
+        <div class="intro_content">
+            <h1>Bizzloggr</h1>
+            <p>
+                Bizzloggr is a mobile app that can identify and show all business places you called but don't have saved in your contacts. It can help you keep track of your interactions and enables you to organize identified places just the way you want it.
+            </p>
+            <p class="cta">Start loggn' now!</p>
+            <a href="https://play.google.com/store/apps/details?id=net.miloradfilipovic.bizzloggr" class="google_play_badge" target="_blank">
+                <img src="images/google-play-badge.png" alt="Get in to Google play">
+            </a>
+        </div>
+    </main>
+    <section id="about" class="two_columns">
+        <div class="section_content">
+            <div class="wider_col first about">
+                <h2>What can Bizzloggr do for you?</h2>
+                <ul>
+                    <li>Do you have to search online each time you want to call a nice restaurant?</li>
+                    <li>Maybe you don't have your dentist's number saved or you forgot when was the last appointment?</li>
+                    <li>Are you often in touch with different business partners or clients? Would it be nice to have their full info together with your interaction history?</li>
+                    <li>BizzLoggr will show information about all unknown numbers in your call history it can identify.</li>
+                    <li>You can access your chosen places faster by adding them to favorites.</li>
+                    <li>Save place to your contacts with the provided data filled in for you.</li>
+                    <li>View selected place on a map so you can easily navigate to it's address if needed.</li>
+                </ul>
+            </div>
+            <div class="smaller_col second screenshot">
+                <img src="images/Mockup_bizzlogr.png" alt="Application screenshot">
+            </div>
+        </div>
+    </section>
+    <section id="pricing">
+        <div class="pricing_heading">
+            <h2>Get<br> Bizzloggr</h2>
+        </div>
+        <div class="section_content">
+            <table class="pricing_table">
+                <thead>
+                    <tr class="logo">
+                        <th class="invisible">&nbsp;</th>
+                        <th class="logo lite">
+                            <div>
+                                <img src="images/favicon.png" alt="bizzloggr logo">
+                                <span>Bizzloggr Lite</span>
+                            </div>
+                        </th>
+                        <th class="logo pro">
+                            <div>
+                                <img src="images/favicon.png" alt="bizzloggr logo">
+                                <span>Bizzloggr</span>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr class="descr">
+                        <th class="invisible">&nbsp;</th>
+                        <th class="descr lite">
+                            <div>
+                                Try it out before buying
+                            </div>
+                        </th>
+                        <th class="descr pro">
+                            <div>
+                                Buy the full version
+                            </div>
+                        </th>
+                    </tr>
+                    <tr class="price">
+                        <th class="invisible">&nbsp;</th>
+                        <th class="price lite">
+                            <div class="price_wrapper">
+                                <div class="price_tag lite">
+                                    <span>Free</span>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="price pro">
+                            <div class="price_wrapper">
+                                <div class="price_tag pro">
+                                    <span class="currency superscript">$</span>
+                                    <span class="amount">4</span>
+                                    <span class="superscript decimal">99</span>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr colspan=3 class="spacer no_border"></tr> -->
+                    <tr>
+                        <td class="feature_column">
+                            <p class="feature_title">Number identification</p>
+                            <p class="feature_descr">Bizzloggr will scan your whole call history or just a part of it, depending on the verison.</p>
+                        </td>
+                        <td><b>Last month</b></td><td><b>Unlimited</b></td>
+                    </tr>
+                    <tr>
+                        <td class="feature_column">
+                            <p class="feature_title">Favorite places</p>
+                            <p class="feature_descr">Make your favorite places list for easy access.</p>
+                        </td>
+                        <td class="no">✕</td><td class="yes">✓</td>
+                    </tr>
+                    <tr>
+                        <td class="feature_column">
+                            <p class="feature_title">Call history for each place</p>
+                            <p class="feature_descr">View detailed call history for selected place.</p>
+                        </td>
+                        <td class="no">✕</td><td class="yes">✓</td>
+                    </tr>
+                    <tr>
+                        <td class="feature_column">
+                            <p class="feature_title">Save to contacts</p>
+                            <p class="feature_descr">Add selected place with the provided data to your contacts.</p>
+                        </td>
+                        <td class="no">✕</td><td class="yes">✓</td>
+                    </tr>
+                    <tr>
+                        <td class="feature_column">
+                            <p class="feature_title">Show on map</p>
+                            <p class="feature_descr">Show selected place in Maps app.</p>
+                        </td>
+                        <td class="no">✕</td><td class="yes">✓</td>
+                    </tr>
+                    <tr class="no_border">
+                        <td class="feature_column">
+                            <p class="feature_title">Much more in future updates</p>
+                            <p class="feature_descr">We'll provide some new awesome features along the way.</p>
+                        </td>
+                        <td class="no">✕</td><td class="yes">✓</td>
+                    </tr>
+                    <!-- <tr colspan=3 class="spacer no_border"></tr> -->
+                </tbody>
+                <tfoot>
+                    <tr class="play_store">
+                        <td class="blank">&nbsp;</td>
+                        <td class="lite">
+                            <div>
+                                <a href="https://play.google.com/store/apps/details?id=net.miloradfilipovic.bizzloggrlite" target="_blank">
+                                    <img src="images/google-play-badge.png" alt="Get bizzloggr Lite on play store">
+                                </a>
+                            </div>
+                        </td>
+                        <td class="pro">
+                            <div>
+                                <a href="https://play.google.com/store/apps/details?id=net.miloradfilipovic.bizzloggr" target="_blank">
+                                    <img src="images/google-play-badge.png" alt="Get bizzloggr on play store">
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="pricing_mobile">
+                <div class="mobile_price lite">
+                    <div class="logo">
+                        <img src="images/favicon.png" alt="bizzloggr logo">
+                        <span>BizzLoggr Lite</span>
+                    </div>
+                    <div class="mobile_descr lite">
+                        <p>Call identification with limited history and no additional features</p>
+                    </div>
+                    <div class="price_wrapper lite">
+                        <div class="price_tag lite">
+                            <span>Free</span>
+                        </div>
+                    </div>
+                    <div class="mobile_price_footer lite">
+                        <a href="#" target="_blank">
+                            <img src="images/google-play-badge.png" alt="Get bizzloggr Lite on play store">
+                        </a>
+                    </div>
+                </div>
+                <div class="mobile_price pro">
+                    <div class="logo">
+                        <img src="images/favicon.png" alt="bizzloggr logo">
+                        <span>BizzLoggr</span>
+                    </div>
+                    <div class="mobile_descr pro">
+                        <p>Well, everything we got.</p>
+                    </div>
+                    <div class="price_wrapper pro">
+                        <div class="price_tag pro">
+                            <span class="currency superscript">$</span>
+                            <span class="amount">4</span>
+                            <span class="superscript decimal">99</span>
+                        </div>
+                    </div>
+                    <div class="mobile_price_footer pro">
+                        <a href="#" target="_blank">
+                            <img src="images/google-play-badge.png" alt="Get bizzloggr on play store">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="section_content">
+            <div class="contact-form">
+                <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+                    <div class="form-row">
+                        <input type="text" name="first_name" placeholder="First name" required>
+                        <input type="text" name="last_name" placeholder="Last name" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" name="email" placeholder="email" required>
+                        <select name="product">
+                            <option value="bizzloggr">Bizzloggr</option>
+                            <option value="bizzloggr-lite">Bizzloggr Lite</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <textarea name="message" cols="30" rows="10" placeholder="Your message..." required></textarea>
+                    </div>
+                    <div class="form-row submit">
+                        <div class="recaptcha" data-netlify-recaptcha="true"></div>
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>Here for you</h2>
+                <ul>
+                    <li>Let us know here if you have any thoughts or questions about the app.</li>
+                    <li>Help Bizzloggr grow. Any suggestion for improvement is welcome.</li>
+                    <li>Write in if you need help or if something is not working as expected.</li>
+                    <li>Or if you just want to say hello.</li>
+                </ul>
+                <ul class="contact_list">
+                    <li>You can also get in touch via <a href="mailto:bizzloggr@gmail.com?subject=Bizzloggr contact">email</a>.</li>
+                    <li>Don't feel like writing? Maybe you can find your answers on our 
+                        <a href="/faq.html">frequently asked questions page.</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="copy">
+            &copy; 2021 Bizzloggr
+        </div>
+        <div class="signature">
+            Handmade by <a href="https://miloradfilipovic.net" target="_blank">Milorad Filipović</a>
+        </div>
+    </footer>
 </body>
 </html>

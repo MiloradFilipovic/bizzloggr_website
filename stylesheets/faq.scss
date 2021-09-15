@@ -1,0 +1,112 @@
+@import 'structure';
+
+#faq {
+    margin-top: 4em;
+    padding: $section_padding_vertical_large/2;
+
+    h1 {
+        width: 100%;
+        color: $black;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        margin: 2em 0;
+    }
+
+    .section_content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    a {
+        color: $primary;
+        &:visited { color: $primary_dark; }
+    
+        &.lite {
+            color: $lite_primary;
+            &:visited { color: $lite_primary_dark; }
+        }
+    }
+
+    .notice {
+        margin: 5em 0 0;
+        font-size: 1.2em;
+        color: $black;
+    }
+}
+
+
+.question-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: .5em 0;
+
+    .question {
+        width: 90%;
+        padding: .5em;
+        font-size: 1.2em;
+        color: $black;
+
+        p:before {
+            content: "Q:";
+            color: $primary;
+            margin-right: .5em;
+        }
+    }
+
+    .separator {
+        width: 100%;
+        border-top: 1px solid $secondary_text;
+        margin-bottom: .5em;
+    }
+
+    .answer {
+        width: 100%;
+        font-size: 1.1em;
+        padding: .5em;
+        display: none;
+        p:before {
+            content: "A:";
+            color: $primary;
+            margin-right: .5em;
+        }
+    }
+
+    .toggle { display: none; }
+    .toggle_button {
+        width: 2%;
+        color: $primary;
+        cursor: pointer;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+        margin-right: .5em;
+        padding-right: 1.5em;
+
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 1.5em;
+            content: "\f078";
+        }
+    }
+
+    .toggle:checked {
+        & ~ .dropdown { display: block; }
+        & ~ label::before { content: "\f077"; }
+    }
+}
+
+@include small {
+    #faq { 
+        padding: 3em 1em; 
+        h1, h2 { text-align: left; }
+        .question-card {
+            .question, .answer { font-size: 1em; }
+        }
+    }
+}

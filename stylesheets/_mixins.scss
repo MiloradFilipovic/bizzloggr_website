@@ -1,0 +1,49 @@
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        display: block;
+        clear: both;
+        height: 1px;
+        margin-top: -1px;
+        visibility: hidden;
+    }
+    & {
+        *zoom: 1;
+    }
+}
+
+@mixin large {
+    @media screen and (max-width:1500px) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media screen and (max-width: 1300px) {
+        @content;
+    }
+}
+
+
+@mixin small {
+    @media screen and (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin narrow {
+    @media screen and (max-height: 500px) {
+        @content;
+    }
+}
+
+@mixin tall {
+    @media screen and (min-width: 800px) and (min-height: 800px) {
+        @content;
+    }
+}
