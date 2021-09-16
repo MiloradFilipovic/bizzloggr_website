@@ -248,35 +248,45 @@
                         <input type="text" name="last_name" placeholder="Last name" required>
                     </div>
                     <div class="form-row">
-                        <input type="email" name="email" placeholder="email" required>
+                        <input type="email" name="email" placeholder="Email" required>
                         <select name="product">
                             <option value="bizzloggr">Bizzloggr</option>
                             <option value="bizzloggr-lite">Bizzloggr Lite</option>
                         </select>
                     </div>
                     <div class="form-row">
-                        <textarea name="message" cols="30" rows="10" placeholder="Your message..." required></textarea>
+                        <textarea name="message" cols="30" rows="10" placeholder="Dear Bizz, I meant to write you sooner but I've just been bizzy..." required></textarea>
                     </div>
                     <div class="form-row submit">
                         <div class="recaptcha" data-netlify-recaptcha="true"></div>
-                        <input type="submit" value="Send">
+                        <input type="submit" value="Send" class="buttons">
                     </div>
                 </form>
             </div>
             <div class="contact-info">
                 <h2>Here for you</h2>
                 <ul>
-                    <li>Let us know here if you have any thoughts or questions about the app.</li>
-                    <li>Help Bizzloggr grow. Any suggestion for improvement is welcome.</li>
-                    <li>Write in if you need help or if something is not working as expected.</li>
-                    <li>Or if you just want to say hello.</li>
+                    <li>Need help? Or you found a bug? Feel free to contact us.</li>
+                    <li>Have an idea for an improvement? Help Bizzloggr grow.</li>
+                    <li>Have some thoughts or questions? Let us know.</li>
+                    <li>Want to say hello? By all means...</li>
                 </ul>
-                <ul class="contact_list">
+                <!-- <ul class="contact_list">
                     <li>You can also get in touch via <a href="mailto:bizzloggr@gmail.com?subject=Bizzloggr contact">email</a>.</li>
                     <li>Don't feel like writing? Maybe you can find your answers on our 
                         <a href="/faq.html">frequently asked questions page.</a>
                     </li>
-                </ul>
+                </ul> -->
+                <div class="info-bottom">
+                    <div class="email">
+                        <p>You can also</p>
+                        <a href="mailto:bizzloggr@gmail.com?subject=Bizzloggr contact" class="buttons">email us</a>
+                    </div>
+                    <div class="faq">
+                        <p>Or check out our</p>
+                        <a href="/faq" class="buttons">FAQ</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

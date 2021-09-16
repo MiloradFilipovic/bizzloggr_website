@@ -102,6 +102,23 @@ header {
     }
 }
 
+.buttons {
+    display: inline-flex;
+    border: none !important;
+    padding: .5em 4em !important;
+    background-color: $primary;
+    color: #fff !important;
+    box-shadow: $elevation_2dp !important;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+        box-shadow: $elevation_4dp !important;
+        color: $yellow !important;
+    }
+}
+
 section {
     padding: $section_padding_vertical_large $section_padding_horizontal_large; //10em 20em
 

@@ -345,9 +345,14 @@
     background-color: $primary_dark;
     color: #fff;
 
-    li:before {
-        color: $grey_light;
+    li {
+        font-size: 1.2em;
+        &:before {
+            color: $yellow;
+            content: "➜";
+        }
     }
+
 
     .contact-form {
         padding: 1em;
@@ -364,7 +369,7 @@
                     font-family: $main_font;
                     font-size: 1.2em;
                     border: none;
-                    padding: 5px 1em;
+                    padding: 10px 1em;
                     color: $black;
                 }
                 input[type="text"] {
@@ -377,9 +382,11 @@
                     width: 30%;
                     margin: 5px;;
                     padding: 10px;
-                    color: $black;
+                    // color: $black;
                     background-color: #fff;
                     border: none;
+                    font-size: 1.2em;
+
                 }
                 textarea {
                     width: 100%;
@@ -396,19 +403,6 @@
                         width: 70%;
                         padding: 10px;
                         color: #fff;
-                    }
-                    input[type=submit] {
-                        border: none;
-                        padding: .5em 4em;
-                        background-color: $primary;
-                        color: #fff;
-                        box-shadow: $elevation_2dp;
-                        cursor: pointer;
-                        text-transform: uppercase;
-                        &:hover {
-                            box-shadow: $elevation_4dp;
-                            color: $yellow;
-                        }
                     }
                 }
             }
@@ -428,10 +422,31 @@
             // transform: rotate(-4deg);
         }
 
-        .contact_list {
+        .info-bottom {
             margin-top: 3em;
-            a {
-                color: #fff;
+            display: flex;
+
+            .email, .faq {
+                width: 50%;
+                padding: .5em;
+                text-align: center;
+                background-color: $grey_light;
+                color: $primary !important;
+                margin: 0 .5em;
+                border-radius: 5px;
+
+                p {
+                    text-align: center;
+                }
+
+                .buttons {
+                    color: $primary !important;
+                    padding: 0 !important;
+                    font-size: 1.5em;
+                    font-weight: bold;
+                    background-color: transparent !important;
+                    box-shadow: none !important;
+                }
             }
         }
     }
@@ -524,12 +539,6 @@
 
 // Phone version
 @include small {
-
-    .intro {
-        .intro_content {
-        }
-    }
-
     #about {
         .about { ul { text-align: left; } }
         .screenshot { text-align: center; }
