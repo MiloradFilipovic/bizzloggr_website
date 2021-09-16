@@ -570,6 +570,10 @@
         .section_content {
             flex-direction: column-reverse;
 
+            .contact-form {
+                padding: 3em 0 0;
+            }
+
             .contact-form, .contact-info {
                 width: 100%;
             }
