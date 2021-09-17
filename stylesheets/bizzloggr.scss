@@ -537,6 +537,7 @@
         .contact-form {
             form {
                 .form-row {
+                    padding: 0;
                     flex-direction: column;
                     input[type="text"], input[type=email], textarea, select {
                         width: 100%;
