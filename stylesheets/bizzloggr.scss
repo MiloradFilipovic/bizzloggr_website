@@ -392,6 +392,7 @@
                     background-color: #fff;
                     border: none;
                     font-size: 1.2em;
+                    -webkit-appearance: none !important;
 
                 }
                 select:required:invalid {
