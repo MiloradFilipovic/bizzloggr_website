@@ -371,6 +371,7 @@
                     border: none;
                     padding: 10px 1em;
                     color: $black;
+                    @include placeholder-color(#999);
                 }
                 input[type="text"] {
                     width: 50%;
@@ -394,7 +395,7 @@
 
                 }
                 select:required:invalid {
-                    color: gray;
+                    color: #999;
                 }
                 textarea {
                     width: 100%;
@@ -403,6 +404,7 @@
                     padding: 10px;
                     font-family: $main_font;
                     color: $black;
+                    @include placeholder-color(#999);
                 }
                 
                 &.submit {
