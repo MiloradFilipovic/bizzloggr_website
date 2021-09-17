@@ -378,6 +378,11 @@
                 input[type=email] {
                     width: 70%;
                 }
+                input[type=submit] {
+                    display: inline-block;
+                    text-align: center;
+                    -webkit-appearance: none !important;
+                }
                 select {
                     width: 30%;
                     margin: 5px;;
@@ -387,6 +392,9 @@
                     border: none;
                     font-size: 1.2em;
 
+                }
+                select:required:invalid {
+                    color: gray;
                 }
                 textarea {
                     width: 100%;
@@ -434,18 +442,22 @@
                 color: $primary !important;
                 margin: 0 .5em;
                 border-radius: 5px;
-
-                p {
-                    text-align: center;
+                text-decoration: none;
+                box-shadow: $elevation_2dp;
+             
+                &:hover {
+                    box-shadow: $elevation_4dp;
+                    .button_heading {
+                        text-decoration: underline;
+                    }
                 }
 
-                .buttons {
-                    color: $primary !important;
-                    padding: 0 !important;
-                    font-size: 1.5em;
-                    font-weight: bold;
-                    background-color: transparent !important;
-                    box-shadow: none !important;
+                span {
+                    display: block;
+                    &.button_heading {
+                        text-transform: uppercase;
+                        font-size: 1.5em;
+                    }
                 }
             }
         }

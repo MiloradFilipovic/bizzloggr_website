@@ -249,13 +249,14 @@
                     </div>
                     <div class="form-row">
                         <input type="email" name="email" placeholder="Email" required>
-                        <select name="product">
+                        <select name="product" required>
+                            <option value="" disabled selected>Select app</option>
                             <option value="bizzloggr">Bizzloggr</option>
                             <option value="bizzloggr-lite">Bizzloggr Lite</option>
                         </select>
                     </div>
                     <div class="form-row">
-                        <textarea name="message" cols="30" rows="10" placeholder="Dear Bizz, I meant to write you sooner but I've just been bizzy..." required></textarea>
+                        <textarea name="message" cols="30" rows="10" placeholder="Dear Bizz, I meant to write you sooner but I just been busy..." required></textarea>
                     </div>
                     <div class="form-row submit">
                         <div class="recaptcha" data-netlify-recaptcha="true"></div>
@@ -271,21 +272,15 @@
                     <li>Have some thoughts or questions? Let us know.</li>
                     <li>Want to say hello? By all means...</li>
                 </ul>
-                <!-- <ul class="contact_list">
-                    <li>You can also get in touch via <a href="mailto:bizzloggr@gmail.com?subject=Bizzloggr contact">email</a>.</li>
-                    <li>Don't feel like writing? Maybe you can find your answers on our 
-                        <a href="/faq.html">frequently asked questions page.</a>
-                    </li>
-                </ul> -->
                 <div class="info-bottom">
-                    <div class="email">
-                        <p>You can also</p>
-                        <a href="mailto:bizzloggr@gmail.com?subject=Bizzloggr contact" class="buttons">email us</a>
-                    </div>
-                    <div class="faq">
-                        <p>Or check out our</p>
-                        <a href="/faq" class="buttons">FAQ</a>
-                    </div>
+                    <a href="mailto:bizzloggr@gmail.com?subject=Bizzloggr contact" class="email">
+                        <span class="button_subheading">You can also</span>
+                        <span class="button_heading">email us</span>
+                    </a>
+                    <a href="/faq" class="faq">
+                        <span class="button_subheading">Or check out our</span>
+                        <span class="button_heading">FAQ</span>
+                    </a>
                 </div>
             </div>
         </div>
