@@ -387,11 +387,11 @@
                 select {
                     width: 30%;
                     margin: 5px;;
-                    padding: 10px;
+                    padding: 10px .9em;
                     // color: $black;
                     background-color: #fff;
                     border: none;
-                    font-size: 1.2em;
+                    font-size: 1.1em;
                     -webkit-appearance: none !important;
 
                 }
@@ -405,6 +405,7 @@
                     padding: 10px;
                     font-family: $main_font;
                     color: $black;
+                    border: none;
                     @include placeholder-color(#999);
                 }
                 
